@@ -1,6 +1,6 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import Container from './Container'
+import React from "react";
+import { shallow } from "enzyme";
+import Container from "./Container";
 
 describe("Container", () => {
   let wrapper;
@@ -19,13 +19,13 @@ describe("Container", () => {
       time: "",
       id: 5
     }
-  ]
-  
+  ];
+
   beforeEach(() => {
-    wrapper = shallow(<Container reservations={reservations} />)
-  })
+    wrapper = shallow(<Container reservations={reservations} />);
+  });
 
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
-  })
-})
+  });
+});

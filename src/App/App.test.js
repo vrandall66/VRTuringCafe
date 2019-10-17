@@ -22,20 +22,20 @@ describe("App", () => {
 
   it("should update state without the cancelled reservation", () => {
     const cancelledReservation = {
-      "name": "Robbie",
-      "date": "10/17",
-      "time": "12:00PM",
-      "number": 2,
-      "id": 60
+      name: "Robbie",
+      date: "10/17",
+      time: "12:00PM",
+      number: 2,
+      id: 60
     };
     const otherReservation = {
-      "name": "Travis",
-      "date": "10/18",
-      "time": "12:30PM",
-      "number": 4,
-      "id": 61
-    }
-    const reservations = [cancelledReservation, otherReservation]
+      name: "Travis",
+      date: "10/18",
+      time: "12:30PM",
+      number: 4,
+      id: 61
+    };
+    const reservations = [cancelledReservation, otherReservation];
     wrapper.instance().setState({ reservations: reservations });
     wrapper.instance().deleteReservation(cancelledReservation.id);
     expect(wrapper.state("reservations")).toEqual([otherReservation]);
