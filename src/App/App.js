@@ -3,7 +3,7 @@ import Container from "../Components/Container/Container";
 import Form from "../Components/Form/Form";
 import "./App.css";
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -11,9 +11,9 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = async () => {
     this.getAllReservations();
-  }
+  };
 
   getAllReservations = () => {
     return fetch("http://localhost:3001/api/v1/reservations").then(response => {
@@ -56,5 +56,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

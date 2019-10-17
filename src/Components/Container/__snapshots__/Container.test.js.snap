@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container should match the snapshot 1`] = `
+<Fragment>
+  <div
+    className="Container"
+  >
+    <Card
+      key="4"
+      reservation={
+        Object {
+          "date": "",
+          "id": 4,
+          "name": "",
+          "number": 0,
+          "time": "",
+        }
+      }
+    />
+    <Card
+      key="5"
+      reservation={
+        Object {
+          "date": "",
+          "id": 5,
+          "name": "",
+          "number": 1,
+          "time": "",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;
