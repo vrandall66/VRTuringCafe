@@ -42,6 +42,13 @@ export default class App extends Component {
     );
   };
 
+  deleteReservation = id => {
+    let filtered = this.state.reservations.filter(
+      reservation => reservation.id !== id
+    );
+    return this.setState({ reservations: filtered });
+  };
+
   render() {
     return (
       <div className="App">
@@ -50,7 +57,10 @@ export default class App extends Component {
           <Form newReservation={this.newReservation} />
         </div>
         <div className="resy-container">
-          <Container reservations={this.state.reservations} />
+          <Container
+            reservations={this.state.reservations}
+            deleteReservation={this.deleteReservation}
+          />
         </div>
       </div>
     );

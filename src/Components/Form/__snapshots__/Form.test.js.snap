@@ -5,6 +5,7 @@ exports[`Form should match the snapshot 1`] = `
   className="Form>"
 >
   <input
+    id="Form__input--name"
     name="name"
     onChange={[Function]}
     placeholder="Name"
@@ -12,6 +13,7 @@ exports[`Form should match the snapshot 1`] = `
     value=""
   />
   <input
+    id="Form__input--date"
     name="date"
     onChange={[Function]}
     placeholder="Date (mm/dd)"
@@ -19,6 +21,7 @@ exports[`Form should match the snapshot 1`] = `
     value=""
   />
   <input
+    id="Form__input--time"
     name="time"
     onChange={[Function]}
     placeholder="Time"
@@ -26,13 +29,15 @@ exports[`Form should match the snapshot 1`] = `
     value=""
   />
   <input
+    id="Form__input--number"
     name="number"
     onChange={[Function]}
     placeholder="Number of Guests"
     type="text"
-    value={1}
+    value=""
   />
   <button
+    id="Form__btn--submit"
     name="submit"
     onClick={[Function]}
     type="button"

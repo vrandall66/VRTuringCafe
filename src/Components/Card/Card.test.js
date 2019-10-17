@@ -4,6 +4,7 @@ import Card from "./Card";
 
 describe("Card", () => {
   let wrapper;
+  const deleteReservation = jest.fn();
   let reservation = {
     name: "",
     date: "",
@@ -13,10 +14,22 @@ describe("Card", () => {
   };
 
   beforeEach(() => {
-    wrapper = shallow(<Card reservation={reservation} key={reservation.id} />);
+    wrapper = shallow(
+      <Card
+        reservation={reservation}
+        key={reservation.id}
+        deleteReservation={deleteReservation}
+      />
+    );
   });
 
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should invoke deleteReservation onClick of Cancel Reservation", () => {
+    wrapper.find("#Card__btn--delete").simulate("click");
+
+    expect(deleteReservation).toHaveBeenCalled();
   });
 });

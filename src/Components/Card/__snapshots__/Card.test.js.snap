@@ -13,6 +13,8 @@ exports[`Card should match the snapshot 1`] = `
   </p>
   <p />
   <button
+    id="Card__btn--delete"
+    onClick={[Function]}
     type="button"
   >
     Cancel
