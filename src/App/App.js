@@ -24,15 +24,23 @@ class App extends Component {
         .json()
         .then(reservations => this.setState({ reservations: reservations }));
     });
-  }
+  };
 
-  newReservation = (newReservation) => {
-    console.log('new', newReservation)
-    console.log(this.state.reservations)
+  newReservation = newReservation => {
     this.setState({
       reservations: [...this.state.reservations, newReservation]
     });
-  }
+    const options = {
+      method: "POST",
+      body: JSON.stringify(newReservation),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+    return fetch("http://localhost:3001/api/v1/reservations", options).then(
+      response => response.json()
+    );
+  };
 
   render() {
     return (
